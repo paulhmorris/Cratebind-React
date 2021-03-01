@@ -50,6 +50,7 @@ class App extends Component {
     this.setState({ searchedUser: e.target.value })
   }
 
+  // Runs on Search button press
   handleSearch = (e) => {
     this.setState({
       repos: [],
@@ -71,7 +72,7 @@ class App extends Component {
   }
 
   render() {
-    let repos = null
+    let repos = null;
     if (this.state.showRepos) {
       repos = this.state.repos.map((repo) => {
         return (
@@ -85,8 +86,9 @@ class App extends Component {
           />
         )
       })
-    }
+    };
 
+    // Get details for the repo the user clicked
     let repoDetail = this.state.repos.filter((repo) => repo.id === this.state.repoDetailId);
 
     return (
