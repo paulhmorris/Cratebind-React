@@ -26,11 +26,16 @@
   height: 39px;
   padding: 6px 1em;
   font-size: 15px;
-  color: dimgray;
+  color: #353535;
   border: solid 1px lightgray;
   border-right: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  transition: border .25s;
+}
+
+.search:focus {
+  border: solid 1px royalblue;
 }
 
 .search-button {
@@ -40,7 +45,7 @@
   font-size: 15px;
   background-color: royalblue;
   color: white;
-  border: solid 1px lightgray;
+  border: solid 1px royalblue;
   border-left: none;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -51,7 +56,7 @@
   margin: auto;
   height: 120px;
   width: 120px;
-  top: 0;
+  top: -30%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -82,10 +87,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
   padding: 2em;
   background-color: white;
   border-radius: 4px;
   border: solid 1px lightgray;
+  transform: scale(1);
+  transition: transform .25s;
+}
+
+.repo-card:hover {  
+  transform: scale(1.03);
 }
 
 .repo-title {
@@ -97,7 +109,27 @@
   margin-top: 0;
 }
 
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .repo-language {
-  /* justify-self: flex-end; */
   margin-right: 6px;
+}
+
+.stargazers {
+  justify-self: flex-end;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  width: 35%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: white;
+  border-radius: 4px;
+  border: solid 1px lightgray;
 }
